@@ -34,12 +34,12 @@
                                     data-src = "{$product.cover.bySize.home_default.url}"
                                     alt = "{if !empty($product.cover.legend)}{$product.cover.legend}{else}{$product.name|truncate:30:'...'}{/if}"
                                     data-full-size-image-url = "{$product.cover.large.url}"
-                                    class="lazyload"
+                                    loading="lazy"
                             >
                         {elseif isset($urls.no_picture_image)}
-                            <img class="lazyload" src="{$urls.no_picture_image.bySize.home_default.url}">
+                            <img loading="lazy" src="{$urls.no_picture_image.bySize.home_default.url}">
                         {else}
-                            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==">
+                            <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==">
                         {/if}
                     </a>
                 {/block}

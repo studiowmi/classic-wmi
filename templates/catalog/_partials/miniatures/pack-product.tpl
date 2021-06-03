@@ -32,9 +32,10 @@
               <img
                 data-src="{$product.cover.medium.url}"
                 alt="{$product.cover.legend}"
-                class="lazyload pack-product__img"
+                class="pack-product__img"
                 width="55"
                 height="55"
+                loading="lazy"
               >
             </a>
           </div>
