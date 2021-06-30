@@ -56,22 +56,20 @@
           {if $image.id_image != $product.default_image.id_image}
 
       <div class="product-img">
-          <div class="rc">
-              <img
-                      class="img-fluid" loading="lazy"
-                      {if !$smarty.foreach.images.first && !$product.default_image}data-sizes="auto"{/if}
-                      {if !$smarty.foreach.images.first && !$product.default_image}data-{/if}srcset="{$image.bySize.medium_default.url} 452w,
+          <img
+                  class="img-fluid" loading="lazy"
+                  {if !$smarty.foreach.images.first && !$product.default_image}data-sizes="auto"{/if}
+                  {if !$smarty.foreach.images.first && !$product.default_image}data-{/if}srcset="{$image.bySize.medium_default.url} 452w,
                    {$image.bySize.pdt_180.url} 180w,
                    {$image.bySize.pdt_300.url} 300w,
                    {$image.bySize.pdt_360.url} 360w,
                    {$image.bySize.pdt_540.url} 540w"
-                      {if !$smarty.foreach.images.first && !$product.default_image}data-{/if}src="{$image.bySize.medium_default.url}"
-                      alt="{$image.legend}"
-                      title="{$image.legend}">
-              <noscript>
-                  <img class="img-fluid" src="{$image.bySize.medium_default.url}" alt="{$image.legend}">
-              </noscript>
-          </div>
+                  {if !$smarty.foreach.images.first && !$product.default_image}data-{/if}src="{$image.bySize.medium_default.url}"
+                  alt="{$image.legend}"
+                  title="{$image.legend}">
+          <noscript>
+              <img class="img-fluid" src="{$image.bySize.medium_default.url}" alt="{$image.legend}">
+          </noscript>
       </div>
           {/if}
       {/foreach}
@@ -88,27 +86,23 @@
       {if $product.images|count > 1}
       <div class="product-thumbs js-qv-product-images visible-desktop slick__arrow-outside" data-slick='{literal}{"asNavFor":"[data-slick].products-imagescover","slidesToShow": {/literal}{if $product.images|count > 2}3{else}2{/if}{literal}, "slidesToScroll": 1,"focusOnSelect": true,"centerMode":false,"rows": 0,"variableWidth": true}{/literal}' data-count="{$product.images|count}">
           <div class="product-thumb slick-active">
-              <div class="rc">
-                  <img
+              <img
                       class="thumb js-thumb img-fluid" loading="lazy"
-                      data-src="{$product.default_image.bySize.small_default.url}"
+                      src="{$product.default_image.bySize.small_default.url}"
                       alt="{$product.default_image.legend}" title="{$product.default_image.legend}"
 
               >
-              </div>
           </div>
           {foreach from=$product.images item=image}
               {if $image.id_image != $product.default_image.id_image}
           <div class="product-thumb">
-              <div class="rc">
               <img
-              class="thumb js-thumb img-fluid" loading="lazy"
-              data-src="{$image.bySize.small_default.url}"
-              alt="{$image.legend}"
-              title="{$image.legend}"
+                      class="thumb js-thumb img-fluid" loading="lazy"
+                      src="{$image.bySize.small_default.url}"
+                      alt="{$image.legend}"
+                      title="{$image.legend}"
 
-            >
-              </div>
+              >
           </div>
               {/if}
         {/foreach}

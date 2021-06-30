@@ -28,10 +28,10 @@
 
             <div class="card-img-top product__card-img">
                 {block name='product_thumbnail'}
-                    <a href="{$product.url}" class="thumbnail product-thumbnail rc ratio1_1">
+                    <a href="{$product.url}" class="thumbnail product-thumbnail ratio1_1">
                         {if $product.cover}
                             <img
-                                    data-src = "{$product.cover.bySize.home_default.url}"
+                                    src = "{$product.cover.bySize.home_default.url}"
                                     alt = "{if !empty($product.cover.legend)}{$product.cover.legend}{else}{$product.name|truncate:30:'...'}{/if}"
                                     data-full-size-image-url = "{$product.cover.large.url}"
                                     loading="lazy"

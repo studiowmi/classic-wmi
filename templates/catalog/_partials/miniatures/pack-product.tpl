@@ -28,9 +28,9 @@
       <div class="pack-product-container">
         <div class="thumb-mask">
           <div class="mask">
-            <a href="{$product.url}" title="{$product.name}" class="rc ratio1_1 d--block">
+            <a href="{$product.url}" title="{$product.name}" class="ratio1_1 d--block">
               <img
-                data-src="{$product.cover.medium.url}"
+                src="{$product.cover.medium.url}"
                 alt="{$product.cover.legend}"
                 class="pack-product__img"
                 width="55"

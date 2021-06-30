@@ -77,6 +77,3 @@ $(document).ready(() => {
   })
 
 });
-document.addEventListener('lazyloaded', function(e){
-    $(e.target).parent().addClass('rc--lazyload');
-});

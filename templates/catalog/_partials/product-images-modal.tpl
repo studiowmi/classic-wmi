@@ -28,8 +28,8 @@
             <div class="modal-body">
                 <div data-slick id="js-slick-product">
                     {foreach from=$product.images item=image}
-                        <figure class="position-relative rc rc_1_1">
-                            <img data-src="{$image.large.url}" class="img-fluid" loading="lazy" width="{$image.large.width}" alt="{$image.legend}" title="{$image.legend}">
+                        <figure class="position-relative">
+                            <img loading="lazy" src="{$image.large.url}" class="img-fluid" loading="lazy" width="{$image.large.width}" alt="{$image.legend}" title="{$image.legend}">
                         </figure>
                     {/foreach}
                 </div>
